@@ -1,0 +1,67 @@
+<head>
+    <title>Rick and Morty</title>
+  
+   {% load bootstrap4 %}
+   {% bootstrap_css %}
+   <style>
+    body {
+        background-image: url("https://www.xtrafondos.com/wallpapers/rick-y-morty-temporada-4-4114.jpg");
+        background-position: center;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    p, h1{
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        color: #fff;
+        font: 18px Arial, sans-serif;
+    }
+    table tr td, table tr th{
+    background-color: rgba(255,255,255, 0.5) !important;
+    }
+    a {
+        color: rgba(0,0,0);
+    }
+</style>
+  </head>
+  
+  <body>
+    <div>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">Rick and Morty</a>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                </div>
+                <form class="topnav" method="get" action="/search/" >
+                    <input  type="search" name="name" id="search">
+                    <button type="submit"> Buscar </button>
+                </form>
+            </div>
+        </nav>
+    </br>
+    <h1 class="text-center">Ubicación</h1>
+    <h1 class="text-center">Nombre: {{context.name}}</h1>
+    <h1 class="text-center">Tipo: {{context.type}}</h1>
+    <h1 class="text-center">Dimensión: {{context.dimension}}</h1>  
+    </br>   
+    <h1 class="text-center">Listado de residentes</h1>  
+    <table class="table table-striped table-condensed table-bordered">  
+        <thead>
+            <tr>
+            <th scope="col" >Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for data in residentes %}
+                <tr>
+                    <td><a href = "../../{{data.id}}/personaje">{{data.name}}</a></td>
+                </tr>
+            {% endfor %}
+        </tbody>
+        </table>
+  
+        
+    </div>
+    </br>
+    {% bootstrap_javascript jquery='full' %}
+  </body>
