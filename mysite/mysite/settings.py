@@ -23,7 +23,7 @@ SECRET_KEY = 'b38fj3%&yemgv2-ev%_9_a*&^5z7p30)-=ptwo8thhj)gq*0yw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['rick-and-morty-tata.herokuapp.com']
+ALLOWED_HOSTS = ['rick-tata.herokuapp.com']
 
 
 # Application definition
