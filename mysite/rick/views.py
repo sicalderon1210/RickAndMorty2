@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 import json
-import pandas as pd
 import requests 
 
 def index(request):
