@@ -3,6 +3,7 @@ from django.http import HttpResponse
 import json
 import requests 
 
+
 def index(request):
     # return HttpResponse("Hello, world. You're at the polls index.")
     def buscar_info(URL, num):
